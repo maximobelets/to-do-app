@@ -1,17 +1,17 @@
-document.querySelector('.add-button').addEventListener('click', function() {
-    var data = document.querySelector('.get-data').value;
+document.querySelector('.get-data__button').addEventListener('click', function() {
+    var data = document.querySelector('.get-data__input').value;
     var listElement = document.createElement('li');
     var deleteButton = document.createElement('button');
 
     function addText () {
-        var list = document.querySelector('.main-list');
+        var list = document.querySelector('.data__list');
         listElement.innerHTML = data;
+        listElement.classList.add('data__item');
         list.appendChild(listElement);
     }
 
     function addDeleteBuutton () {
-        deleteButton.classList.add('delete-button');
-        deleteButton.innerHTML = 'Delete';
+        deleteButton.classList.add('data__button');
         listElement.appendChild(deleteButton);
     }
 
