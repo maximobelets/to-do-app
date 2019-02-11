@@ -1,3 +1,7 @@
+body {
+    font-family: 'PT Sans', Arial, sans-serif;
+}
+
 .page-main {
     width: 460px;
     margin-left: auto;
