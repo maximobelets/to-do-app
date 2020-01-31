@@ -1,21 +1,23 @@
-document.querySelector('.get-data__button').addEventListener('click', function() {
-    var data = document.querySelector('.get-data__input').value;
-    var listElement = document.createElement('li');
-    var deleteButton = document.createElement('button');
+'use strict'
 
-    function addText () {
-        var list = document.querySelector('.data__list');
+const getData = document.querySelector('.get-data__button').addEventListener('click', () => {
+    const data = document.querySelector('.get-data__input').value;
+    const listElement = document.createElement('li');
+    const deleteButton = document.createElement('button');
+
+    const addText = () => {
+        const list = document.querySelector('.data__list');
         listElement.innerHTML = data;
         listElement.classList.add('data__item');
         list.appendChild(listElement);
     }
 
-    function addDeleteBuutton () {
+    const addDeleteBuutton = () => {
         deleteButton.classList.add('data__button');
         listElement.appendChild(deleteButton);
     }
 
-    deleteButton.addEventListener('click', function() {
+    deleteButton.addEventListener('click', () => {
         listElement.remove();
     });
     
@@ -23,25 +25,26 @@ document.querySelector('.get-data__button').addEventListener('click', function()
     addDeleteBuutton();
 });
 
-addEventListener('keyup', function(event) {
+addEventListener('keyup', (event) => {
     if (event.keyCode === 13) {
-        var data = document.querySelector('.get-data__input').value;
-        var listElement = document.createElement('li');
-        var deleteButton = document.createElement('button');
+        const data = document.querySelector('.get-data__input').value;
+        const listElement = document.createElement('li');
+        const deleteButton = document.createElement('button');
 
-        function addText () {
-            var list = document.querySelector('.data__list');
+        const addText = () => {
+            const list = document.querySelector('.data__list');
             listElement.innerHTML = data;
             listElement.classList.add('data__item');
             list.appendChild(listElement);
     }
 
-    function addDeleteBuutton () {
+
+    const addDeleteBuutton = () => {
         deleteButton.classList.add('data__button');
         listElement.appendChild(deleteButton);
     }
 
-    deleteButton.addEventListener('click', function() {
+    deleteButton.addEventListener('click', () => {
         listElement.remove();
     });
     
